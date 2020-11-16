@@ -1,4 +1,4 @@
-public class Bicycle {
+public class Bicycle implements IMove, IStop {
     private int distanceTravelled;
 
     public Bicycle() {
@@ -7,5 +7,13 @@ public class Bicycle {
 
     public int getDistanceTravelled() {
         return distanceTravelled;
+    }
+
+    public void move(int distance) {
+        this.distanceTravelled += distance;
+    }
+
+    public String stop() {
+        return "Stop pedalling, apply brakes.";
     }
 }

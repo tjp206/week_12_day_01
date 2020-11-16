@@ -26,4 +26,20 @@ public class CarTest {
     public void odomoterReadingStartsAtZero() {
         assertEquals(0, car.getOdometerReading());
     }
+
+    @Test
+    public void canMove() {
+        car.move(10);
+        assertEquals(10, car.getOdometerReading());
+    }
+
+    @Test
+    public void canStart() {
+        assertEquals("Switch on ignition.", car.start());
+    }
+
+    @Test
+    public void canStop() {
+        assertEquals("Ease off accelerator, apply brakes.", car.stop());
+    }
 }

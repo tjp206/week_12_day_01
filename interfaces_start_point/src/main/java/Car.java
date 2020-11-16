@@ -1,4 +1,4 @@
-public class Car {
+public class Car implements IMove, IStart, IStop {
     private String make;
     private String model;
     private int odometerReading;
@@ -19,5 +19,17 @@ public class Car {
 
     public int getOdometerReading() {
         return odometerReading;
+    }
+
+    public void move(int distance) {
+        this.odometerReading += distance;
+    }
+
+    public String start() {
+        return "Switch on ignition.";
+    }
+
+    public String stop() {
+        return "Ease off accelerator, apply brakes.";
     }
 }

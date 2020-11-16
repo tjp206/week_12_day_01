@@ -15,4 +15,15 @@ public class BicycleTest {
     public void hasDistanceAtBeginning() {
         assertEquals(0, bicycle.getDistanceTravelled());
     }
+
+    @Test
+    public void canMove() {
+        bicycle.move(20);
+        assertEquals(20, bicycle.getDistanceTravelled());
+    }
+
+    @Test
+    public void canStop() {
+        assertEquals("Stop pedalling, apply brakes.", bicycle.stop());
+    }
 }
