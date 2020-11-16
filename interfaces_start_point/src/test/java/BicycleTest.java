@@ -3,19 +3,16 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class RunnerTest {
-
-    Runner runner;
+public class BicycleTest {
+    private Bicycle bicycle;
 
     @Before
     public void before() {
-        runner = new Runner();
+        bicycle = new Bicycle();
     }
 
     @Test
     public void hasDistanceAtBeginning() {
-        assertEquals(0, runner.getDistanceTravelled());
+        assertEquals(0, bicycle.getDistanceTravelled());
     }
-
-
 }

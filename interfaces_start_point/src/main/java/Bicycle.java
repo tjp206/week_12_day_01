@@ -1,7 +1,7 @@
-public abstract class Athlete {
-    protected int distanceTravelled;
+public class Bicycle {
+    private int distanceTravelled;
 
-    public Athlete() {
+    public Bicycle() {
         this.distanceTravelled = 0;
     }
 
